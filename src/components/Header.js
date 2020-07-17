@@ -2,9 +2,8 @@ import React from "react"
 
 function Header() {
     return(
-        <h1>Vikas Gupta</h1>
+        <header className="navbar">Vikas Gupta</header>
     )
-    
 }
 
 export default Header;

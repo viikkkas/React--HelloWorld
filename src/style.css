@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgb(27, 25, 25);
+    height: 100px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
