@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import AboutMe from "./components/AboutMe"
 
 ReactDOM.render(
-  <AboutMe/>,
+  <App/>,
   document.getElementById('root')
 );
 
