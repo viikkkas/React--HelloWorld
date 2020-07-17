@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import AboutMe from "./components/AboutMe"
 
 ReactDOM.render(
-  <h1>Hello World</h1>,
+  <AboutMe/>,
   document.getElementById('root')
 );
 
