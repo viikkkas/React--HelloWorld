@@ -17,7 +17,11 @@ class App extends React.Component {
   }
 
   handleClick() {
-    this.setState({count:1}) 
+    this.setState(prevState => {
+      return{
+        count: prevState.count + 1
+      }
+    }) 
   }
 
   render() {
