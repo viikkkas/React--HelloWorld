@@ -8,14 +8,29 @@ import './style.css'
 import ContactCard from './components/contact';
 
 class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      count:0
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.setState({count:1}) 
+  }
+
   render() {
     return (
       <div>
-         <Header />
-         <MainContent />
-         <Footer /><br/><br/>
-         <ContactCard contact = {{name: "Vikas Gupta", phone: "911"}}/>
-         <ContactCard contact = {{name: "Bruce Wayne", phone: "100"}}/>
+          <Header />
+          <MainContent />
+          <Footer /><br/><br/>
+          <ContactCard contact = {{name: "Vikas Gupta", phone: "911"}}/>
+          <ContactCard contact = {{name: "Bruce Wayne", phone: "100"}}/>
+          <hr/>
+          <p align="center"><h1>{this.state.count}</h1>
+          <button onClick = {this.handleClick}>Change!</button></p>
       </div>
     );
   }
