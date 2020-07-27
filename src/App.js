@@ -7,16 +7,18 @@ import Footer from './components/Footer';
 import './style.css'
 import ContactCard from './components/contact';
 
-function App() {
-  return (
-    <div>
-       <Header />
-       <MainContent />
-       <Footer /><br/><br/>
-       <ContactCard contact = {{name: "Vikas Gupta", phone: "911"}}/>
-       <ContactCard contact = {{name: "Bruce Wayne", phone: "100"}}/>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+         <Header />
+         <MainContent />
+         <Footer /><br/><br/>
+         <ContactCard contact = {{name: "Vikas Gupta", phone: "911"}}/>
+         <ContactCard contact = {{name: "Bruce Wayne", phone: "100"}}/>
+      </div>
+    );
+  }
 }
 
 export default App;
