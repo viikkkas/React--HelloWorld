@@ -9,6 +9,7 @@ function MainContent() {
                 <li>Banana</li>
                 <li>Apple</li>
             </ul>
+            
         </div>
     )
 }
