@@ -12,10 +12,12 @@ class App extends React.Component {
     super()
     this.state = {
       count:0,
-      color: ""
+      color: "",
+      isLogged: false
     }
     this.increment = this.increment.bind(this)
     this.decrement = this.decrement.bind(this)
+    this.handleLog = this.handleLog.bind(this)
   }
 
   increment() {
@@ -34,6 +36,14 @@ class App extends React.Component {
     }) 
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+        this.setState({
+            isLoading: false
+        })
+    }, 1500)
+}
+
   componentDidUpdate(prevProps, prevState) {
     if(prevState.count !== this.state.count){
       const newColor = randomcolor()
@@ -41,7 +51,17 @@ class App extends React.Component {
     }
   }
 
+  handleLog(){
+    this.setState(prevState => {
+      return{
+        isLogged: !prevState.isLogged
+      }
+    })
+  }
+
   render() {
+    let buttonText = this.state.isLogged? "Log Out" : "Log In"
+    let disText = this.state.isLogged? "Logged in" : "Logged out"
     return (
       <div>
           <Header />
@@ -53,6 +73,11 @@ class App extends React.Component {
           <p align="center"><h1 style={{color: this.state.color}}>{this.state.count}</h1>
           <button onClick = {this.increment}>Increment</button><br/>
           <button onClick = {this.decrement}>Decrement</button></p>
+          <hr/>
+          <p align="center">
+            <button onClick = {this.handleLog}>{buttonText}</button><br/>
+            {disText}
+          </p>
       </div>
     );
   }
